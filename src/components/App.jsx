@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Notification } from './Feedback/Notification';
 import { Section } from './Feedback/Section';
+import { Wrapper } from './Feedback/Section.styled';
 import { Statistics } from './Feedback/Statistics';
 
 export const App = () => {
@@ -38,7 +39,7 @@ export const App = () => {
   const allParamsAreZero = good === 0 && neutral === 0 && bad === 0;
 
   return (
-    <>
+    <Wrapper>
       <Section title="Please leave feedback" >
         <FeedbackOptions
           onLeaveFeedbackGood={handleClickGood}
@@ -60,6 +61,6 @@ export const App = () => {
           />
         )}
       </Section>
-    </>
+    </Wrapper>
   );
 };
